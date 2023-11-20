@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// routes/web.php
+
+use App\Http\Controllers\PustakawanController;
+
+Route::resource('pustakawan', PustakawanController::class);
+
+use App\Http\Controllers\RakController;
+
+Route::resource('rak', RakController::class);

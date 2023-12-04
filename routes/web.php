@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//use App\Http\Controllers\peminjamanbukuController;
+
+Route::resource('peminjamanbuku',\App\Http\Controllers\peminjamanbukuController::class);
+
+
+// web.php
+
+// web.php
+
+//use App\Http\Controllers\pengembalianbukuController;
+
+//Route::resource('pengembalian',\App\Models\pengembalianbukuController::class);
+
+Route::resource('/pengembalianbuku', \App\Http\Controllers\pengembalianbukuController::class);

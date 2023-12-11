@@ -22,3 +22,7 @@ Route::resource('pustakawan', PustakawanController::class);
 use App\Http\Controllers\RakController;
 
 Route::resource('rak', RakController::class);
+
+Route::get('/pages', function () {
+    return view('pages.dashboard');
+});

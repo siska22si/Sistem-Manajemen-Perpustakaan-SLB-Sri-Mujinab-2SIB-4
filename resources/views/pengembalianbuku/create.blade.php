@@ -20,13 +20,13 @@
             @csrf
 
             <div class="form-group">
-                <label for="id_pinjam">Username:</label>
+                <label for="id_pinjam">id_pinjam:</label>
                 <input type="text" class="form-control" id="id_pinjam" name="id_pinjam" value="{{ old('id_pinjam') }}">
             </div>
 
             <div class="form-group">
-                <label for="tanggal_pengembalian">Password:</label>
-                <input type="text" class="form-control" id="tanggal_pengembalian" name="tanggal_pengembalian" value="{{ old('tanggal_pengembalian') }}">
+                <label for="tanggal_pengembalian">tanggal_pengembalian</label>
+                <input type="date" class="form-control" id="tanggal_pengembalian" name="tanggal_pengembalian" value="{{ old('tanggal_pengembalian') }}">
             </div>
 
             <button type="submit" class="btn btn-primary">Tambah pengembalianbuku</button>

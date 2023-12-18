@@ -9,8 +9,8 @@ class pengembalianbukuController extends Controller
 {
     public function index()
     {
-        $pengembalianbukus = pengembalianbuku::all();
-        return view('pengembalianbuku.index', compact('pengembalianbukus'));
+        $pengembalianbuku = pengembalianbuku::all();
+        return view('pengembalianbuku.index', compact('pengembalianbuku'));
     }
 
     public function create()
@@ -21,7 +21,6 @@ class pengembalianbukuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_pinjam' => 'required',
             'tanggal_pengembalian' => 'required',
         ]);
 
@@ -37,7 +36,7 @@ class pengembalianbukuController extends Controller
 
     public function update(Request $request, pengembalianbuku $pengembalianbuku)
     {
-        $request->validate([
+        $request->validate([    
             'id_pinjam' => 'required',
             'tanggal_pengembalian' => 'required',
         ]);

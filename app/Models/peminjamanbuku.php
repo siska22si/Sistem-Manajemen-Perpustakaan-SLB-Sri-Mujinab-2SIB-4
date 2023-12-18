@@ -14,6 +14,8 @@ class peminjamanbuku extends Model
             'tanggal_pinjam',
             'tanggal_kembali', // Menambahkan kolom _token ke dalam fillable
         ];
-    protected $primaryKey = 'id_pinjam';
+    protected $primaryKey = 'id_buku';
+
+    protected $table = 'peminjamanbuku';
     public $timestamps = false;
 }

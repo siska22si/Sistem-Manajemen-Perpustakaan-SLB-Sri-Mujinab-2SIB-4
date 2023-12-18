@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <form action="{{ route('pengembalianbuku.update', $pengembalianbuku->id_pengembalianbuku) }}" method="POST">
+        <form action="{{ route('pengembalianbuku.update', $pengembalianbuku->id_pinjam) }}" method="POST">
             @csrf
             @method('PUT')
 

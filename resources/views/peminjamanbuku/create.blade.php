@@ -20,11 +20,7 @@
         <form action="{{ route('peminjamanbuku.store') }}" method="POST">
             @csrf
 
-            <div class="form-group">
-                <label for="id_buku">id buku:</label>
-                <input type="text" class="form-control" id="id_buku" name="id_buku" value="{{ old('id_buku') }}">
-            </div>
-
+    
             <div class="form-group">
                 <label for="nama_peminjam">nama_peminjam:</label>
                 <input type="text" class="form-control" id="nama_peminjam" name="nama_peminjam" value="{{ old('nama_peminjam') }}">

@@ -6,7 +6,7 @@
     <title>pengembalianbuku List</title>
 </head>
 <body>
-    <h1>pengembalianbuku List</h1>
+    <h1>Pengembalianbuku List</h1>
 
     <a href="{{ route('pengembalianbuku.create') }}">Tambah pengembalianbuku</a>
 
@@ -18,20 +18,18 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Username</th>
-                <th>Password</th>
+                <th>tanggal_pengembalian</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @forelse($pengembalianbukus as $pengembalianbuku)
+            @forelse($pengembalianbuku as $pengembalianbuku)
                 <tr>
-                    <td>{{ $pengembalianbuku->id_pengembalianbuku }}</td>
-                    <td>{{ $pengembalianbuku->username }}</td>
-                    <td>{{ $pengembalianbuku->password }}</td>
+                    <td>{{ $pengembalianbuku->id_pinjam }}</td>
+                    <td>{{ $pengembalianbuku->tanggal_pengembalian }}</td>
                     <td>
-                        <a href="{{ route('pengembalianbuku.edit', $pengembalianbuku->id_pengembalianbuku) }}">Edit</a>
-                        <form method="post" action="{{ route('pengembalianbuku.destroy', $pengembalianbuku->id_pengembalianbuku) }}" style="display:inline;">
+                        <a href="{{ route('pengembalianbuku.edit', $pengembalianbuku->id_pinjam) }}">Edit</a>
+                        <form method="post" action="{{ route('pengembalianbuku.destroy', $pengembalianbuku->id_pinjam) }}" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" onclick="return confirm('Apakah anda ingin menghapus?')">Delete</button>

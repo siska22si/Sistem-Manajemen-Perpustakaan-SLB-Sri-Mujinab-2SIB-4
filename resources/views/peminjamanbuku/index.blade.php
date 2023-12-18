@@ -17,24 +17,23 @@
     <table border="1">
         <thead>
             <tr>
-                <th>id_pinjam</th>
                 <th>id_buku</th>
                 <th>nama_peminjam</th>
                 <th>tanggal_pinjam</th>
                 <th>tanggal_kembali</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @forelse($peminjamanbuku as $peminjamanbuku)
+            @forelse($peminjamanbuku as $peminjaman)
                 <tr>
-                    <td>{{ $peminjamanbuku->id_pinjam }}</td>
-                    <td>{{ $peminjamanbuku->id_buku }}</td>
-                    <td>{{ $peminjamanbuku->nama_peminjam }}</td>
-                    <td>{{ $peminjamanbuku->tanggal_pinjam }}</td>
-                    <td>{{ $peminjamanbuku->tanggal_kembali }}</td>
+                    <td>{{ $peminjaman->id_buku }}</td>
+                    <td>{{ $peminjaman->nama_peminjam }}</td>
+                    <td>{{ $peminjaman->tanggal_pinjam }}</td>
+                    <td>{{ $peminjaman->tanggal_kembali }}</td>
                     <td>
-                        <a href="{{ route('peminjamanbuku.edit', $peminjamanbuku->id_pinjam) }}">Edit</a>
-                        <form method="post" action="{{ route('peminjamanbuku.destroy', $peminjamanbuku->id_pinjam) }}" style="display:inline;">
+                        <a href="{{ route('peminjamanbuku.edit', $peminjaman->id_buku) }}">Edit</a>
+                        <form method="post" action="{{ route('peminjamanbuku.destroy', $peminjaman->id_buku) }}" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" onclick="return confirm('Apakah anda ingin menghapus?')">Delete</button>
@@ -43,7 +42,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="4">Tidak ditemukan</td>
+                    <td colspan="5">Tidak ditemukan</td>
                 </tr>
             @endforelse
         </tbody>

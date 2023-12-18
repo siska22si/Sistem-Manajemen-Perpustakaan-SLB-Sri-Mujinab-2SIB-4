@@ -21,7 +21,6 @@ class PeminjamanbukuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_buku' => 'required',
             'nama_peminjam' => 'required',
             'tanggal_pinjam' => 'required',
             'tanggal_kembali' => 'required',
@@ -40,7 +39,6 @@ class PeminjamanbukuController extends Controller
     public function update(Request $request, Peminjamanbuku $peminjamanbuku)
     {
         $request->validate([
-            'id_buku' => 'required',
             'nama_peminjam' => 'required',
             'tanggal_pinjam' => 'required',
             'tanggal_kembali' => 'required',

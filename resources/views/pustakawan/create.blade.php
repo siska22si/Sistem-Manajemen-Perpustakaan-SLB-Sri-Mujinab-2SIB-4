@@ -1,6 +1,6 @@
 <!-- resources/views/pustakawan/create.blade.php -->
 
-@extends('layouts.app') <!-- Sesuaikan dengan layout yang Anda miliki -->
+@extends('pages.tables') <!-- Sesuaikan dengan layout yang Anda miliki -->
 
 @section('content')
     <div class="container">

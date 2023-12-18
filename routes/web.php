@@ -23,6 +23,27 @@ use App\Http\Controllers\RakController;
 
 Route::resource('rak', RakController::class);
 
-Route::get('/pages', function () {
+Route::get('/pages/dashboard', function () {
     return view('pages.dashboard');
 });
+
+Route::get('/pages/tables', function () {
+    return view('pages.tables');
+});
+
+Route::get('/pages/ptofile', function () {
+    return view('pages.profile');
+});
+
+Route::get('/pages/sign-up', function () {
+    return view('pages.sign-up');
+});
+
+Route::get('/pages/sign-in', function () {
+    return view('pages.sign-in');
+});
+
+
+// Route::delete('pustakawan/{pustakawan}', 'PustakawanController@destroy')->name('pustakawan.destroy');
+// // Contoh definisi rute untuk halaman pengeditan
+// Route::get('pustakawan/{pustakawan}/edit', 'PustakawanController@edit')->name('pustakawan.edit');
